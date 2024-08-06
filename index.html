@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="disk/css/styles.css" />
+    <script src="disk/js/index.js" defer></script>
+    <title>Formulaire d'inscription</title>
+  </head>
+  <body>
+    <div class="navbar">Corals</div>
+    <div class="container">
+      <div class="form-container">
+        <div class="form header">
+          <h1>Créer votre Compte</h1>
+          <p>Commencez avec vos 30 jours d'essai gratuit</p>
+          <a href="">
+            <img
+              src="img/icons8-logo-google-48.png"
+              class="google-icon"
+              alt="Icon-google"
+            />
+            Login With Google</a
+          >
+        </div>
+        <div class="form-separator">or</div>
+        <form action="post" class="form-content" id="form">
+          <div class="form-group">
+            <label for="name" class="required">Nom</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+              placeholder="Entrez votre Nom"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" class="required">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="off"
+              placeholder="Entrez votre Email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="required">Mot de Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              autocomplete="off"
+              placeholder="Entrez votre Mot de Password"
+            />
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="agreeTerms" id="agreeTerms" />
+            <label for="agreeTerms">
+              j'accepte les
+              <a href="#">termes, ploitique de confidetialités et frais</a>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary sgnup-btn">
+            M'inscrire
+          </button>
+          <div class="account-confirmation">
+            <p>Déjâ un compte avec nous ?</p>
+            <a href="#" class="link">Me Connecter</a>
+          </div>
+          <div class="form-ouput" id="outputSelection"></div>
+        </form>
+      </div>
+
+      <!--Section pour image de decoration-->
+      <div class="hero-container">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1>Discovering the Best funiture for Your Home</h1>
+            <p>
+              Our practice is Descigning complete Environnements exceptional
+              buildings and place in special situations
+            </p>
+            <div class="tags">
+              <span
+                ><img
+                  src="img/icons8-compte-vérifié-50.png"
+                  alt="icon"
+                  class="icon"
+                />
+                100% Guarantee</span
+              >
+              <span
+                ><img src="img/icons8-camion-50.png" alt="icon" />delivery
+                Cameroun area</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

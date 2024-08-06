@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;800&display=swap");
+
+:root {
+  --font-noto: "Noto Serif Khitan Small Script", serif;
+  --font-poppins: "Poppins", sans-serif;
+  --graf: #ccc;
+  --dark-gray: #717171;
+  --black: #000;
+  --green: #fff;
+  --red: red;
+  --green: rgb(52, 172, 132);
+  --bg-img: url("img/pexels-oloye-3929523.jpg");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  font-family: var(--font-poppins);
+  font-size: 1.1rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+input {
+  border: 1px solid var(--gray);
+  background-color: transparent;
+  font-weight: 500;
+
+  &:focus {
+    border: 1px solid var(--dark-gray);
+  }
+
+  &::placeholder {
+    color: var(--gray);
+  }
+
+  &.invalid {
+    border-color: var(--red);
+  }
+
+  &[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid var(--gray);
+    line-height: 1em;
+  }
+}
+
+.form-group input,
+.btn,
+.tag {
+  padding: 0.75rem;
+  font-size: 1em;
+  line-height: 1em;
+  border-radius: 999px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  font-weight: 500;
+
+  &.hover {
+    cursor: pointer;
+  }
+  &.btn-primary {
+    background-color: var(--black);
+    color: #fff;
+
+    &.hover {
+      background-color: #222;
+    }
+    &.btn-secondaire {
+      border: 1px solid var(--gray);
+    }
+  }
+
+  &.btn-secondary {
+    border: 1px solid var(--gray);
+    &.hover {
+      border-color: var(--dark-gray);
+    }
+    a.btn{
+      width: 100%;
+      text-decoration: none;
+      color:inherit;
+    }
+    .icon{
+      width: 1.5em;
+      height: 1.5em;
+      line-height: normal;
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 0 0.9fr;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 70%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  > .form-header {
+    h1 {
+      font-size: 2em;
+      font-weight: 800;
+    }
+    p {
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .icon {
+      width: 1.5em;
+      height: 1.5em;
+      line-height: normal;
+    }
+  }
+  > .form-separator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    color: var(--dark-gray);
+
+    &::before,
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: calc(
+        50% - 2ch
+      ); /* la largeur soit la moitie mins les 2 charateresdu mot "or" */
+      height: 1px;
+      background-color: var(--gray);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  > .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .form-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+    .input-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      vertical-align: middle;
+    }
+    .account-confirmation {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* style pour la section des erreurs lorsqu ell n'est pas vide =>il ya des erreurs*/
+    .form-ouput:not(:empty) {
+      border-top: 1px solid var(--gray);
+      padding-top: 0.5rem;
+      color: var(--red);
+    }
+  }
+}
+
+.form-group label,
+.input-group label {
+  font-weight: 500;
+
+  &.required::after {
+    content: "*";
+    color: var(--red);
+  }
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--green);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Section HERO: .hero-container */
+.hero-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+  justify-content: center;
+  border-radius:2rem;
+  background: var(--bg-img);
+}
