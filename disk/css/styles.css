@@ -9,7 +9,8 @@
   --green: #fff;
   --red: red;
   --green: rgb(52, 172, 132);
-  --bg-img: url("img/pexels-oloye-3929523.jpg");
+  --bg-img: url("img/pexels-ketut-subiyanto-4353618.jpg");
+  
 }
 
 *,
@@ -198,6 +199,9 @@ input {
       color: var(--red);
     }
   }
+  .signup-btn{
+    margin: 0.5rem 0;
+  }
 }
 
 .form-group label,
@@ -226,6 +230,6 @@ input {
   grid-template-columns: 1fr;
   align-items: end;
   justify-content: center;
-  border-radius:2rem;
+  border-radius:2.5rem;
   background: var(--bg-img);
 }
