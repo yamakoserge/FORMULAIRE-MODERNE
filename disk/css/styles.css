@@ -10,7 +10,6 @@
   --red: red;
   --green: rgb(52, 172, 132);
   --bg-img: url("img/pexels-ketut-subiyanto-4353618.jpg");
-  
 }
 
 *,
@@ -59,14 +58,6 @@ input {
   }
 }
 
-.form-group input,
-.btn,
-.tag {
-  padding: 0.75rem;
-  font-size: 1em;
-  line-height: 1em;
-  border-radius: 999px;
-}
 .btn {
   display: flex;
   justify-content: center;
@@ -95,17 +86,27 @@ input {
     &.hover {
       border-color: var(--dark-gray);
     }
-    a.btn{
+    a.btn {
       width: 100%;
       text-decoration: none;
-      color:inherit;
+      color: inherit;
     }
-    .icon{
+    .icon {
       width: 1.5em;
       height: 1.5em;
       line-height: normal;
     }
   }
+}
+
+
+.form-group input,
+.btn,
+.tag {
+  padding: 0.75rem;
+  font-size: 1em;
+  line-height: 1em;
+  border-radius: 999px;
 }
 
 .container {
@@ -122,8 +123,16 @@ input {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  height: auto;
+  padding: 1em 8%;
 
   > .form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+
     h1 {
       font-size: 2em;
       font-weight: 800;
@@ -199,7 +208,7 @@ input {
       color: var(--red);
     }
   }
-  .signup-btn{
+  .signup-btn {
     margin: 0.5rem 0;
   }
 }
@@ -224,12 +233,60 @@ input {
   }
 }
 
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  line-height: normal;
+}
+.icon-btn {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Section HERO: .hero-container */
-.hero-container{
+.hero-container {
   display: grid;
   grid-template-columns: 1fr;
   align-items: end;
   justify-content: center;
-  border-radius:2.5rem;
+  border-radius: 2.5rem;
   background: var(--bg-img);
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  text-align: center;
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
+    justify-content: center;
+    justify-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 2.5rem 10%;
+    font-size: 1.2em;
+    backdrop-filter: blur(3px) saturate(1.2);
+    text-shadow: 1px 0 2px rgba(0, 0, 0, 0.251);
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+    p {
+      font-weight: 400;
+    }
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+
+      .tag {
+        border: 1px solid currentColor;
+      }
+    }
+  }
 }
