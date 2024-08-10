@@ -25,6 +25,12 @@ body {
   font-size: 1.1rem;
 }
 
+h1{
+  font-size: 1.05rem;
+  font-family: var(--font-poppins);
+  background-color: var(--white);
+}
+
 .navbar {
   position: fixed;
   top: 2rem;
@@ -57,6 +63,8 @@ input {
     line-height: 1em;
   }
 }
+
+
 
 .btn {
   display: flex;
@@ -288,5 +296,28 @@ input {
         border: 1px solid currentColor;
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .form-container{
+    grid-template-columns: 1fr;
+    padding: 1em 0;;
+  }
+  .hero-container{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container{
+    grid-template-columns: 1fr;
+  }
+  .hero-container{
+    font-size: 1em;
   }
 }
